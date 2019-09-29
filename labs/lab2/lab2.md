@@ -41,7 +41,7 @@
        | Segment 6 | 36.163028 | 0.126165 | 0.1224292 |
 
        - estimated RTT = 0.875 \* EstimatedRTT + 0.125 \* SampleRTT
-       
+  
        | Segment | EstimatedRTT | equation                                 |
        | ------- | ------------ | ---------------------------------------- |
        | 1       | 0.01530365   | 0.125 * 0.1224292                        |
@@ -51,18 +51,25 @@
        | 5       | 0.059660157  | 0.875 \* 0.05068418 + 0.125 \* 0.122492  |
        | 6       | 0.067514137  | 0.875 \* 0.059660157 + 0.125 \* 0.122492 |
   8. What is the length of each of the first six TCP segments?
-       - The first one is 
+       - The first one is 693 bytes
+       - the other 5 are 1460 bytes
   9. What is the minimum amount of available buffer space advertised at the received for the entire trace?  Does the lack of receiver buffer space ever throttle the sender?
-       - a
+       - the minimum amount of availbale buffer space advertised is 5840 bytes
+       - The sender is never throttled because our reciever window kept growing.
   10. Are there any retransmitted segments in the trace file? What did you check for (in the trace) in order to answer this question?
-       - a
+       - There were no retransmitted packets
+       - We know this because the sequence number never skips a number
   11. How much data does the receiver typically acknowledge in an ACK?  Can you identify cases where the receiver is ACKing every other received segment (see Table 3.2 on page 250 in the text).
-       - a
+       - it typically acknowledges 1460 Bytes
+       - yes, sometime the reciever may ACK every other segement causing a different number to be ACK
   12. What is the throughput (bytes transferred per unit time) for the TCP connection?  Explain how you calculated this value.
-       - a
+       - the throughput for the TCP connection is 125KByte/sec
+       - we found this using the throughput graph in wireshark
   13. Use the Time-Sequence-Graph(Stevens) plotting tool to view the sequence number versus time plot of segments being sent from the client to the gaia.cs.umass.edu server.  Can you identify where TCP’s slowstart phase begins and ends, and where congestion avoidance takes over?  Comment on ways in which the measured data differs from the idealized behavior of TCP that we’ve studied in the text.
-       - a
+       - the slowstart phase starts when the HTTP segment is sent
+       - we never exited the slowstart phase because the file was not large enough and the server was not sending fast enough for us to exit it.
+       - the idealized behavior of TCP expects the sender to send the packet with no limitations using their full bandwidth. it also expects large file sizes. In this case it was a relatively small file and we can assume the sender didn't use their full bandwidth
   14. Answer each of two questions above for the trace that you have gathered when you transferred a file from your computer to gaia.cs.umass.edu
-       - a
-- What implementation of TCP is being used by your computer? How do you know? Submit your answers as wireshark tcp.txt or wireshark tcp.pdf
-  
+       - We noticed the same behavior when sending a file back.
+- What implementation of TCP is being used by your computer? How do you know?
+  - The computer we used was using internet protocol Version 4, we found this by going into our internet settings and looking there.
