@@ -1,6 +1,8 @@
 
 # Lab2
 
+## > Ethan Fison and Zan Montieth
+
 ## [20 points] (a) [14 points] Work through the “Wireshark Lab: TCP” and answer all questions. For question 5 in the lab, make sure you list absolute, not relative sequence numbers (b) [3 points] What implementation of TCP is being used by your computer? How do you know? Submit your answers as wireshark tcp.txt or wireshark tcp.pdf
 
 - wireshark lab: TCP from the book.
