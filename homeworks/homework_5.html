@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSCI 440 Homework 5</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="csci-440-homework-5">CSCI 440 Homework 5</h1>
+<h2 id="ethan-fison">Ethan Fison</h2>
+<h3 id="1-what-are-the-differences-between-the-following-types-of-wireless-channel-impairments--path-loss-multipath-propagation-and-interference-from-other-sources">1. What are the differences between the following types of wireless channel impairments- “path loss”, “multipath propagation” and “interference” from other sources?</h3>
+<p><strong>Path Loss</strong>: This results from decreases in signal strength due to distance and pysical interference (from walls and the like).</p>
+<p><strong>Multipath Propagation</strong>: Packet loss resulting from radio signals reflecting off of surfaces, causing some packets to take longer than anticipated to arrive.</p>
+<p><strong>Interference</strong>: Packet loss resulting from radio signals colliding and impacting signal contents.</p>
+<h3 id="2-what-are-the-differences-between-a-master-device-in-a-bluetooth-network-and-base-station-in-80211-network">2. What are the differences between a master device in a bluetooth network and base station in 802.11 network?</h3>
+<p>Bluetooth organizes itself into a piconet of up to eight devices, with one acting as the master, which determines the hopping pattern based on its clock. Slave devices within the piconet have to match that hoppign pattern. Piconets can overlap into something called a Scatternet.</p>
+<p>802.11 uses a base station for transmission and receipt of data between all devices on the network, serving as a hub for the entire network.</p>
+<h3 id="3-if-a-node-has-a-wireless-connection-to-the-internet-does-that-node-have-to-be-mobile-suppose-that-a-user-with-a-laptop-walks-around-her-house-with-her-laptop-and-always-accesses-the-internet-through-the-same-access-point-is-the-user-mobile-from-a-network-standpoint-explain">3. If a node has a wireless connection to the Internet, does that node have to be mobile? Suppose that a user with a laptop walks around her house with her laptop, and always accesses the Internet through the same access point. Is the user mobile from a network standpoint? Explain.</h3>
+<p>Since the access point does not change while the connection is active, the user is not mobile. Mobility is defined the ability of a node to maintain a connection while changing access points over time.</p>
+<h3 id="4-what-are-the-purposes-of-the-hlr-and-vlr-in-gsm-networks-what-elements-of-mobile-ip-are-similar-to-the-hlr-and-vlr">4. What are the purposes of the HLR and VLR in GSM networks? What elements of mobile IP are similar to the HLR and VLR?</h3>
+<p>HLR is a database used to store a subscriber's number, information, and last known location. These data points are used to route information to the correct AP for the device.</p>
+<p>VLR is used to enable services for a subscriber on another network using information from that subscriber's HLR.</p>
+<p>Edge routers on home and foreign networks are similar to GSM's HLR and VLR, respectively.</p>
+<h3 id="5-what-feature-in-3g-and-4g-network-made-them-popular-in-terms-of-massive-user-and-connected-devices-what-are-the-roles-epc-in-4g-architecture">5.  What feature in 3G and 4G network made them popular in terms of massive user and connected devices? What are the roles EPC in 4G architecture?</h3>
+<p>3G introduced mobile data to cellular networks, with all smartphones running a local TCP/IP stack to make this possible. 3G divides connectivity between standard voice communication under more or less the same GSM system used in 2G, and a separate channel for connection to the internet.</p>
+<p>4G improves upon this architcture by being entirely focused on IP. In this network generation, all traffic (voice and data) are handled via IP datagrams, eliminating the older telephony methods of previous generations.</p>
+<p>EPC is used for tunneling between the eNodeB and P-GW for QoS features, such as minimizing delay between UE and P-GW.</p>
+<h3 id="6-why-is-a-packet-that-is-received-after-its-scheduled-playout-time-considered-lost">6. Why is a packet that is received after its scheduled playout time considered lost?</h3>
+<p>That packet can no longer be played out if it arrives too late, and so are discarded.</p>
+
+    </body>
+    </html>

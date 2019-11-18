@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Networks Wireshark Lab 3</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="networks-wireshark-lab-3">Networks Wireshark Lab 3</h1>
+<h2 id="ethan-fison-and-zan-montieth">Ethan Fison and Zan Montieth</h2>
+<p>A)</p>
+<ol>
+<li>(a0:99:9b:19:ff:91)</li>
+<li>(00:00:0c:9f:f2:54). This is not the router for the umass website, but rather the first-hop router on the path, quite possibly the router we are currently connected to at MSU.</li>
+<li>IP: (0x0800)</li>
+<li>The asccii representation of the word GET is 47:46:54 the first character of the command is 52 bytes from the start of the internet frame.</li>
+</ol>
+<p>B) ARP queries are sent in broadcast frames because the host does not know which adapter is linked to the IP address needed. When responding, the sender does not need to do this, as the adapter address for the recipient will be known.</p>
+<p>C)</p>
+<ol>
+<li>
+<p>from the wireshark lab
+a. The opcode field begines 20 bytes from the start of the ethernet frame.
+b) the opcode field is the hax value 0x0001 when an ARP request is made
+c) yes the message contains the IP of the sender
+d) The &quot;question&quot; appears when the target mac address is set to 00:00:00:00:00:00</p>
+</li>
+<li>
+<p>a) The opcode field begines 20 bytes from the start of the ethernet frame.</p>
+<p>b) the opcode field is the hax value 0x0002 when an ARP reply is made</p>
+<p>c) the &quot;answer&quot; to the &quot;question&quot; shows up in the Sender MAC Address field</p>
+</li>
+<li>
+<p>The source is 00:de:d4:f2:d7:88 and the destination is  00:95:f0:2a:f8:2a</p>
+</li>
+<li>
+<p>There is no reply in the trace, because we are requesting data from an invalid sender.</p>
+</li>
+</ol>
+<p>D) For macOS, a dynamically-created ARP table is used to create routes on demand. For the entries in this table, the BSD caching behaviour is used. From the BSD ARP manpage: &quot;These routes time out periodically (normally 20 minutes after validated; entries are not validated when not in use)&quot;</p>
+
+    </body>
+    </html>

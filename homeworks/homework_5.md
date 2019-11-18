@@ -30,4 +30,12 @@ Edge routers on home and foreign networks are similar to GSM's HLR and VLR, resp
 
 ### 5.  What feature in 3G and 4G network made them popular in terms of massive user and connected devices? What are the roles EPC in 4G architecture?
 
+3G introduced mobile data to cellular networks, with all smartphones running a local TCP/IP stack to make this possible. 3G divides connectivity between standard voice communication under more or less the same GSM system used in 2G, and a separate channel for connection to the internet.
+
+4G improves upon this architcture by being entirely focused on IP. In this network generation, all traffic (voice and data) are handled via IP datagrams, eliminating the older telephony methods of previous generations.
+
+EPC is used for tunneling between the eNodeB and P-GW for QoS features, such as minimizing delay between UE and P-GW.
+
 ### 6. Why is a packet that is received after its scheduled playout time considered lost?
+
+That packet can no longer be played out if it arrives too late, and so are discarded.
